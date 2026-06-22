@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pulse — The interactive product platform built for modern teams." />
+  <title>Pulse — Built for Momentum</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <nav class="nav" aria-label="Main navigation">
+
+      <a href="#" class="nav__logo">Pulse</a>
+
+      <ul class="nav__links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#stats">Impact</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav__actions">
+
+        <!-- ✅ DARK MODE TOGGLE — js- prefix = JS hook -->
+        <button
+          class="theme-toggle js-theme-toggle"
+          aria-label="Toggle dark mode"
+          title="Toggle theme"
+        >
+          <span class="theme-toggle__icon js-theme-icon">🌙</span>
+        </button>
+
+        <!-- Hamburger (Popover API from Project 2) -->
+        <button class="nav__hamburger" popovertarget="mobile-menu" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div id="mobile-menu" popover class="mobile-menu">
+        <button class="mobile-menu__close" popovertarget="mobile-menu" popovertargetaction="hide" aria-label="Close menu">✕</button>
+        <ul class="mobile-menu__links">
+          <li><a href="#features" popovertarget="mobile-menu" popovertargetaction="hide">Features</a></li>
+          <li><a href="#stats" popovertarget="mobile-menu" popovertargetaction="hide">Impact</a></li>
+          <li><a href="#faq" popovertarget="mobile-menu" popovertargetaction="hide">FAQ</a></li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__content js-reveal">
+        <span class="hero__badge">⚡ Now live in 40+ countries</span>
+        <h1 class="hero__title">Build Momentum. <br />Ship With Confidence.</h1>
+        <p class="hero__subtitle">
+          Pulse helps product teams track, plan, and launch faster —
+          with real-time data that keeps everyone in sync.
+        </p>
+        <div class="hero__ticker" aria-hidden="true">
+            <span class="hero__ticker-dot"></span>
+            <span class="js-ticker-number">0</span>
+            <span class="hero__ticker-label">tasks shipped today, and counting</span>
+          </div>
+      </div>
+      <div class="hero__image js-reveal">
+        <img
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80"
+          alt="Team analyzing product dashboard with charts on a laptop screen"
+          width="900"
+          height="600"
+        />
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+      <div class="features__header js-reveal">
+        <span class="section__eyebrow">Why Teams Choose Pulse</span>
+        <h2>Everything You Need to Move Fast</h2>
+      </div>
+
+      <div class="features__grid">
+        <article class="feature-card js-reveal">
+          <div class="feature-card__icon">🚀</div>
+          <h3>Instant Deploys</h3>
+          <p>Push changes live in seconds with zero downtime and automatic rollback safety.</p>
+        </article>
+
+        <article class="feature-card js-reveal">
+          <div class="feature-card__icon">📊</div>
+          <h3>Live Analytics</h3>
+          <p>Watch your metrics update in real time — no refresh, no waiting, no guessing.</p>
+        </article>
+
+        <article class="feature-card js-reveal">
+          <div class="feature-card__icon">🔗</div>
+          <h3>Seamless Integrations</h3>
+          <p>Connect Pulse to the tools your team already loves in just one click.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ✅ ANIMATED STATS COUNTER -->
+    <section class="stats" id="stats">
+      <div class="stats__grid js-reveal">
+
+        <div class="stat">
+          <span class="stat__number js-counter" data-target="12500">0</span>
+          <span class="stat__label">Active Teams</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat__number js-counter" data-target="98">0</span>
+          <span class="stat__label">% Uptime</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat__number js-counter" data-target="40">0</span>
+          <span class="stat__label">Countries</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat__number js-counter" data-target="2400000">0</span>
+          <span class="stat__label">Tasks Shipped</span>
+        </div>
+
+      </div>
+    </section>
+
+<!-- ✅ TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+    <div class="testimonials__header js-reveal">
+      <span class="section__eyebrow">Loved By Teams Everywhere</span>
+      <h2>What Our Customers Say</h2>
+    </div>
+
+    <div class="testimonials__grid">
+
+      <article class="testimonial-card js-reveal">
+        <p class="testimonial-card__text">
+          "Pulse cut our release cycle in half. The live analytics alone
+          paid for itself in the first month."
+        </p>
+        <div class="testimonial-card__author">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Headshot of Sarah Chen" width="48" height="48" />
+          <div>
+            <p class="testimonial-card__name">Sarah Chen</p>
+            <p class="testimonial-card__role">Product Lead, Fenwick</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card js-reveal">
+        <p class="testimonial-card__text">
+          "The integrations just work. We connected our entire stack
+          in an afternoon — no engineering ticket required."
+        </p>
+        <div class="testimonial-card__author">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Headshot of Marcus Lee" width="48" height="48" />
+          <div>
+            <p class="testimonial-card__name">Marcus Lee</p>
+            <p class="testimonial-card__role">CTO, Northwind Labs</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card js-reveal">
+        <p class="testimonial-card__text">
+          "Support is incredibly responsive and the dashboard is the
+          cleanest I've used. Our whole team adopted it instantly."
+        </p>
+        <div class="testimonial-card__author">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Headshot of Priya Nair" width="48" height="48" />
+          <div>
+            <p class="testimonial-card__name">Priya Nair</p>
+            <p class="testimonial-card__role">Ops Manager, Lumio</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ✅ PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="pricing__header js-reveal">
+      <span class="section__eyebrow">Simple Pricing</span>
+      <h2>Plans That Scale With You</h2>
+    </div>
+
+    <div class="pricing__grid">
+
+      <article class="pricing-card js-reveal">
+        <h3 class="pricing-card__name">Starter</h3>
+        <p class="pricing-card__price">$0<span>/mo</span></p>
+        <p class="pricing-card__desc">For small teams just getting started.</p>
+        <ul class="pricing-card__features">
+          <li>Up to 5 team members</li>
+          <li>Basic analytics</li>
+          <li>Community support</li>
+        </ul>
+        <a href="#" class="btn btn--ghost">Get Started</a>
+      </article>
+
+      <article class="pricing-card pricing-card--featured js-reveal">
+        <span class="pricing-card__badge">Most Popular</span>
+        <h3 class="pricing-card__name">Pro</h3>
+        <p class="pricing-card__price">$29<span>/mo</span></p>
+        <p class="pricing-card__desc">For growing teams who need more power.</p>
+        <ul class="pricing-card__features">
+          <li>Up to 50 team members</li>
+          <li>Live analytics + exports</li>
+          <li>Priority support</li>
+          <li>All integrations</li>
+        </ul>
+        <a href="#" class="btn btn--primary">Start Free Trial</a>
+      </article>
+
+      <article class="pricing-card js-reveal">
+        <h3 class="pricing-card__name">Enterprise</h3>
+        <p class="pricing-card__price">Custom</p>
+        <p class="pricing-card__desc">For organizations with advanced needs.</p>
+        <ul class="pricing-card__features">
+          <li>Unlimited team members</li>
+          <li>Dedicated account manager</li>
+          <li>SOC 2 + SSO</li>
+          <li>Custom SLAs</li>
+        </ul>
+        <a href="#" class="btn btn--ghost">Contact Sales</a>
+      </article>
+
+    </div>
+  </section>
+
+    <!-- ✅ FAQ ACCORDION -->
+    <section class="faq" id="faq">
+      <div class="faq__header js-reveal">
+        <span class="section__eyebrow">Got Questions?</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq__list js-reveal">
+
+        <div class="faq-item js-faq-item">
+          <button class="faq-item__question js-faq-trigger" aria-expanded="false">
+            <span>Is there a free plan?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Yes! Pulse offers a generous free tier for teams of up to 5 people, with no credit card required to start.</p>
+          </div>
+        </div>
+
+        <div class="faq-item js-faq-item">
+          <button class="faq-item__question js-faq-trigger" aria-expanded="false">
+            <span>Can I cancel anytime?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Absolutely. There are no long-term contracts — cancel or downgrade your plan whenever you like, instantly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item js-faq-item">
+          <button class="faq-item__question js-faq-trigger" aria-expanded="false">
+            <span>Does Pulse work on mobile?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Yes, Pulse is fully responsive and also available as a native app for iOS and Android.</p>
+          </div>
+        </div>
+
+        <div class="faq-item js-faq-item">
+          <button class="faq-item__question js-faq-trigger" aria-expanded="false">
+            <span>Is my data secure?</span>
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Security is our top priority. All data is encrypted in transit and at rest, with SOC 2 compliance built in.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p class="footer__brand">Pulse</p>
+    <p class="footer__copy">&copy; 2026 Pulse. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+      <a href="#features">Features</a>
+      <a href="#stats">Impact</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </footer>
+
+  <!-- ✅ JavaScript loaded at the end, defer ensures DOM is ready -->
+  <script src="js/script.js" defer></script>
+
+</body>
+</html>
